@@ -10,6 +10,8 @@ const salt = bcrypt.genSaltSync(10);
 app.use(express.json());
 app.use(cors());
 
+//Todo: Fix Mongodb connection so registration Api works, Setup LoginPage using jsonwebtoken, Check if logged in, log out function
+
 mongoose.connect(`mongodb+srv://VestaCord:Qwmnebrv10@cluster0.diema.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
 `);
 

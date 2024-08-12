@@ -112,3 +112,7 @@ form h1 {
   color: #333; /* Darker text for better readability */
   margin-bottom: 20px; /* Space below the header */
 }
+
+form.login h1, form.register h1{
+  text-align: center;
+}
