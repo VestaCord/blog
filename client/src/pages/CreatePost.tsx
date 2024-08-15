@@ -1,6 +1,6 @@
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 
 const formats = [
   "header",
@@ -22,7 +22,7 @@ export default function CreatePost() {
   const [content, setContent] = useState("");
   const [files, setFiles] = useState("");
 
-  function createNewPost(ev: React.ChangeEvent<HTMLFormElement>) {
+  function createNewPost(ev: FormEvent) {
     const data = new FormData();
     data.set("title", title);
     data.set("summary", summary);

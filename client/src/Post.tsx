@@ -1,20 +1,22 @@
-import catimg from "./assets/catimg.avif";
-export default function Post() {
-  return (
-    <div className="post">
-      <img src={catimg} alt="post image"></img>
-      <div className="texts">
-        <h2>More fwens coming this year</h2>
-        <p className="info">
-          <a className="author">Jelly Dai</a>
-          <time>2024-01-24 16:45</time>
-        </p>
-        <p className="summary">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi eligendi
-          soluta aperiam nulla odit iusto ex minima voluptatem saepe
-          reprehenderit.
-        </p>
-      </div>
-    </div>
-  );
+ímport {formatISO9075} from "date-fns"
+export default function Post({title,summary,cover,content,createdAt}) {
+
+    return(
+        <div className="post">
+            <div className="image">
+                <img></img>
+
+            </div>
+            <div className="texts">
+                <h2>{title}</h2>
+                <p className="info">
+                    <a className="author">Jelly Dai</a>
+                    <time>{formatISO9075( new Date(createdAt))}</time>
+                </p>
+                <p className="summary">{summary}</p>
+            </div>
+        </div>
+    );
 }
+
+//npm i date-fns
